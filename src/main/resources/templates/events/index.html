@@ -8,12 +8,23 @@
 <table class="table table-striped">
     <thead>
         <tr>
-            <th>Name</th>
+            <th>Event Name</th>
+            <th>Event Description</th>
+            <th>Event Address</th>
         </tr>
     </thead>
     <tr th:each="event : ${events}">
-        <td th:text="${event}"></td>
+        <td th:text="${event.getKey()}"></td>
+        <td th:text="${event.getValue}"></td>
+        <td th:replace="fragments :: address"></td>
+
     </tr>
+<!--    <tr th:each="event : ${events}">-->
+<!--        <td th:text="${event}"></td>-->
+<!--    </tr>-->
+<!--    <th:block th:each="event : ${events}">-->
+<!--        <p th:text="${event.description}">Description</p>-->
+<!--    </th:block>-->
 </table>
 </body>
 </html>
