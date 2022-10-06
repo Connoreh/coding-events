@@ -19,6 +19,9 @@
         <td th:text="${event.name}"></td>
         <td th:text="${event.description}"></td>
         <td th:replace="fragments :: address"></td>
+        <td>
+            <a th:href="@{/events/edit/{id}(id=${event.id})}">Edit</a>
+        </td>
 
     </tr>
 <!--    <tr th:each="event : ${events}">-->
